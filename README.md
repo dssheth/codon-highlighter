@@ -12,7 +12,7 @@
 - Displays codon **position**, **index**, and **reading frame**
 - Outputs an **HTML file** with formatted, colored codons and line breaks
 - Works in **reading frame 0** (default)
-
+- Multiple files in a folder can be processed.
 ---
 
 
