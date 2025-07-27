@@ -16,7 +16,7 @@ start_found=0
 
 echo "📍 Checking stop codons in reading frame 0 (triplets):"
 
-for ((i=0; i<=$len-3; i+=3)); do
+for ((i=frame; i<=$len-3; i+=3)); do
     codon="${sequence:$i:3}"
     pos=$((i+1))
     codon_num=$((i/3+1))
