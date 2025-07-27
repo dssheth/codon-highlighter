@@ -25,7 +25,7 @@ for ((i=frame; i<=$len-3; i+=3)); do
         start_found=1
         start_summary="<p><b>Start Codon (ATG)</b> found at position <b>$pos</b> (codon # <b>$codon_num</b>)</p>"
         highlighted+="<span style=\"color:green;\"><b>$codon </b></span>"
-    elif [[ "$codon" == "TAA" || "$codon" == "TAG" || "$codon" == "TGA" ]]; then
+    elif [[ ("$codon" == "TAA" || "$codon" == "TAG" || "$codon" == "TGA") && $start_found == 1 ]]; then
         echo "❗ Stop codon '$codon' found at position $pos (codon # $codon_num)"
         highlighted+="<span style=\"color:red;\"><b>$codon </b></span>"
         stop_info+="<li>Stop codon <b>$codon</b> at position <b>$pos</b> (codon # <b>$codon_num</b>)</li>"
