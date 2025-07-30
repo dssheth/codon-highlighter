@@ -1,5 +1,5 @@
 # 🧬 Codon Highlighter
-**Codon Highlighter** is a simple Bash-based bioinformatics tool that scans DNA sequences from FASTA files and highlights **start codons** (ATG) and **stop codons** (TAA, TAG, TGA) in an HTML output. It provides a clean visualization for codon positions in a given reading frame.
+**Codon Highlighter** is a simple Bash-based bioinformatics tool that scans coding DNA sequences from FASTA files and highlights **start codons** (ATG) and **stop codons** (TAA, TAG, TGA) in all 6 frames in an HTML output. It translates all the frame sequences to highlights the start and stop amino acids. It provides a clean visualization for codon  and amino acid positions in a given reading frame.
 
 ---
 
@@ -7,11 +7,13 @@
 
 - Supports **FASTA format** input
 - Highlights:
-  - Start codons (`ATG`) in **green**
+  - Start codons (`ATG`) in **green** 
   - Stop codons (`TAA`, `TAG`, `TGA`) in **red**
+  - Non-coding region (after stop codon before next start codon) in **lightblue**
 - Displays codon **position**, **index**, and **reading frame**
-- Outputs an **HTML file** with formatted, colored codons and line breaks
-- Works in **reading frame 0** (default)
+- Translates the sequences, nagivated by the links at the bottom
+- Outputs an **HTML file** with formatted, and highlighted codons
+- Gives output for all 6 reading frames.
 - **Multiple files** in a folder can be processed.
 ---
 
